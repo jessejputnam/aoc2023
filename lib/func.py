@@ -8,7 +8,7 @@ def fetch(day):
     response = r.get(url, cookies=cookies)
 
     hasTerminalNewLine = response.text[-1] == "\n"
-    print(f"New Line: {hasTerminalNewLine}")
+
     return response.text if not hasTerminalNewLine else response.text[:-1]
 
 
