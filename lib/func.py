@@ -13,10 +13,11 @@ def fetch(day):
     return response.text if not hasTerminalNewLine else response.text[:-1]
 
 
-def reduce(arr):
-    if len(arr) == 0:
-        return 0
-    return arr[0] + reduce(arr[1:])
+def addArrItems(arr):
+    output = 0
+    for num in arr:
+        output += num
+    return output
 
 
 def getDivisors(num):
